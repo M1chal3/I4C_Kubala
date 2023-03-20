@@ -1,0 +1,38 @@
+[debug] [2023-03-18T22:24:42.243Z] ----------------------------------------------------------------------
+[debug] [2023-03-18T22:24:42.244Z] Command:       /opt/homebrew/Cellar/node@16/16.19.0_1/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2023-03-18T22:24:42.244Z] CLI Version:   11.20.0
+[debug] [2023-03-18T22:24:42.244Z] Platform:      darwin
+[debug] [2023-03-18T22:24:42.244Z] Node Version:  v16.19.0
+[debug] [2023-03-18T22:24:42.246Z] Time:          Sat Mar 18 2023 23:24:42 GMT+0100 (Central European Standard Time)
+[debug] [2023-03-18T22:24:42.246Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-18T22:24:42.247Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-03-18T22:24:42.289Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-18T22:24:42.289Z] > authorizing via signed-in user (jaroslav.spac@epptec.eu)
+[debug] [2023-03-18T22:24:42.289Z] [iam] checking project webapp-company for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-18T22:24:42.289Z] > refreshing access token with scopes: []
+[debug] [2023-03-18T22:24:42.290Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-03-18T22:24:42.290Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-18T22:24:42.459Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-03-18T22:24:42.459Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-18T22:24:42.473Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/webapp-company:testIamPermissions [none]
+[debug] [2023-03-18T22:24:42.474Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/webapp-company:testIamPermissions x-goog-quota-user=projects/webapp-company
+[debug] [2023-03-18T22:24:42.474Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/webapp-company:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-18T22:24:42.600Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-03-18T22:24:42.600Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-03-18T22:24:43.351Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/webapp-company:testIamPermissions 200
+[debug] [2023-03-18T22:24:43.351Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/webapp-company:testIamPermissions {}
+[debug] [2023-03-18T22:24:43.352Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project webapp-company:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-03-18T22:24:43.353Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/webapp-company [none]
+[debug] [2023-03-18T22:24:43.670Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/webapp-company 403
+[debug] [2023-03-18T22:24:43.670Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/webapp-company {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-03-18T22:24:43.671Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-03-18T22:24:43.796Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/opt/homebrew/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/opt/homebrew/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project webapp-company. Please make sure the project exists and your account has permission to access it.

@@ -1,0 +1,16 @@
+#main_desc {
+  color: aliceblue;
+}
+label {
+  color: aliceblue;
+}
+input {
+  margin: 10px;
+}
+#message {
+  max-width: 500px;
+  max-height: 100px;
+}
+#example {
+  color: aliceblue;
+}
