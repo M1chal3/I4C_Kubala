@@ -8,9 +8,31 @@ input {
   margin: 10px;
 }
 #message {
-  max-width: 500px;
+  min-width: 10vh;
   max-height: 100px;
 }
 #example {
   color: aliceblue;
+}
+.form {
+  height: calc(70vh - 53px);
+  margin: 10vh 0vh 20vh 0vh;
+  width: 100vh;
+  background-color: gray;
+  color: black;
+  display: inline-block;
+  border-radius: 20px;
+}
+.details {
+  color: gold;
+}
+#dark .details {
+  color: white;
+}
+#dark .form {
+  background-color: #1e1e1e;
+  color: white;
+}
+#status_message {
+  color: gold;
 }

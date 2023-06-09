@@ -27,6 +27,11 @@ const Menu = () => {
               Profile
             </Link>
           </li>
+          <li className="menu__item">
+            <Link className="a" to="/calendar">
+              Calendar
+            </Link>
+          </li>
           <li className="menu__item_basket">
             <Link className="shop" to="/eshop">
               <FaShoppingBasket />

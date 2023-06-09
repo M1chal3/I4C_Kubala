@@ -1,5 +1,6 @@
 import React from "react";
 import Product from "./Product";
+import FetchData from "./fetchdata";
 
 const ProductList = (props) => {
   return (
