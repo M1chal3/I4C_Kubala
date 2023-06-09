@@ -1,0 +1,19 @@
+.cal {
+  display: inline-grid;
+  /* position: fixed; */
+  margin: 10vh auto 40vh auto;
+  width: 40%;
+  background-color: aqua;
+  height: 40%;
+  border-radius: 10px;
+}
+#dark .cal {
+  color: gold;
+  background-color: rgba(0, 0, 0, 0.295);
+}
+#dark span {
+  color: red;
+}
+#dark button {
+  color: red;
+}
