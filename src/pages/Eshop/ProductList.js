@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Product from "./Product";
 import FetchData from "./fetchdata";
+import axios, * as others from "axios";
 
-const ProductList = (props) => {
+const ProductList = () => {
+  const [products, setProducts] = useState([]);
+  // this.state = {
+  //   // filtrData: [],
+  // };
+  const getAxios = () => {
+    axios
+      .get("http://localhost:7883/fetch")
+      .then((response) => {
+        const Data = response.data;
+        setProducts(Data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  useEffect(() => getAxios(), []);
+
   return (
     <div className="product-list">
-      <div className="container">
-        {props.products.map((product) => (
+      <div className="container_eshop">
+        {/* <h2>Total products:{this.state.Data}</h2>
+        <input onChange={this.filtrData}>žaluzie</input> */}
+        {products.map((product) => (
           <Product
-            ID={product.ID}
+            Id={product.Id}
             name={product.name}
             description={product.description}
             dimensions={product.dimensions}
@@ -16,7 +36,7 @@ const ProductList = (props) => {
             category={product.category}
             price={product.price}
             productImg={product.productImg}
-            key={product.ID}
+            key={product.Id}
           />
         ))}
       </div>

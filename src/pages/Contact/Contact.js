@@ -31,6 +31,7 @@ const ContactUs = () => {
           setStatusMessage("$(error.text)Oops! něco se nezdařilo");
         }
       );
+    //set space between numbers in input
 
     e.target.reset();
   };
@@ -53,6 +54,7 @@ const ContactUs = () => {
             placeholder="e.g 726 626 325"
             type="number"
             name="phone"
+
           />
           <br></br>
           <label className="details">Your email</label>

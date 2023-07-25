@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import FetchData from "./fetchdata";
-import repos from "./fetchdata";
 
 const Product = ({
+  Id,
   ID,
   name,
   description,
@@ -15,7 +14,7 @@ const Product = ({
 }) => {
   return (
     <>
-      <Link to={`product/${ID}`} className="product">
+      <Link to={`product/${Id}`} className="product">
         {/* <div className="product"> */}
         <img
           src={productImg}
@@ -29,7 +28,6 @@ const Product = ({
         <div className="product__fabric">Materiál: {fabric}</div>
         <div className="product__price">Cena: {price} Kč</div>
         {/* </div> */}
-        <FetchData key={repos.Id} idcko={ID} />
       </Link>
     </>
   );

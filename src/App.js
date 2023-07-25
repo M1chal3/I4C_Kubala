@@ -134,11 +134,8 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
 
-            <Route
-              path="/eshop"
-              element={<ProductList products={DUMMY} />}
-            ></Route>
-            <Route path="/eshop/product/:id" element={<ProductDetail />} />
+            <Route path="/eshop" element={<ProductList />} />
+            <Route path="/eshop/product/:Id" element={<ProductDetail />} />
             <Route path="/eshop/fetchdata" element={<FetchData />} />
 
             <Route path="/calendar" element={<Calendar />} />
