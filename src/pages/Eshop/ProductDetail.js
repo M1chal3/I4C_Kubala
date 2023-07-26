@@ -14,7 +14,6 @@ const ProductDetail = () => {
       .get(`http://localhost:7883/productDetail/${productId}`)
       .then((response) => {
         const Data = response.data;
-        // console.log("This is detail data: ", Data);
         setProductsDetail(Data);
       })
       .catch((error) => {
