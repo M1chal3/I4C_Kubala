@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Product from "./Product";
 import FetchData from "./fetchdata";
-import axios, * as others from "axios";
-
+import axios from "axios";
 const ProductList = () => {
   const [products, setProducts] = useState([]);
-  // this.state = {
-  //   // filtrData: [],
-  // };
+
   const getAxios = () => {
     axios
       .get("http://localhost:7883/fetch")

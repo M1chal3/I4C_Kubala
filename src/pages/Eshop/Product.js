@@ -10,17 +10,13 @@ const Product = ({
   fabric,
   category,
   price,
-  productImg,
+  image,
 }) => {
   return (
     <>
       <Link to={`product/${Id}`} className="product">
         {/* <div className="product"> */}
-        <img
-          src={productImg}
-          alt={`${name} image`}
-          className="product__image"
-        />
+        <img src={image} alt={`${name} image`} className="product__image" />
         {/* <div className="product__category">{category}</div> */}
         <h3 className="product__name">{name}</h3> {/*main name*/}
         {/* <div className="product__description">{description}</div> */}

@@ -48,6 +48,24 @@ app.get("/fetch", (req, res) => {
     }
   });
 });
+app.get("/productDetail/:productDetailId", (req, res) => {
+  const productDetailId = req.params.productDetailId;
+  // console.log("hello");
+  if (!productDetailId) {
+    return res.status(400).send("Missing URL parameter: productDetailId");
+  }
+
+  con.query(
+    `SELECT * FROM DMP_data WHERE Id = ${productDetailId}`,
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
 
 // app.listen(4000, (err) => {
 //   if (err) {

@@ -135,7 +135,10 @@ const App = () => {
             <Route path="/home" element={<Home />} />
 
             <Route path="/eshop" element={<ProductList />} />
-            <Route path="/eshop/product/:Id" element={<ProductDetail />} />
+            <Route
+              path="/eshop/product/:productId"
+              element={<ProductDetail />}
+            />
             <Route path="/eshop/fetchdata" element={<FetchData />} />
 
             <Route path="/calendar" element={<Calendar />} />

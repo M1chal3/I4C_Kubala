@@ -1,41 +1,53 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Product from "./Product";
+import axios from "axios";
+import MainPageImg from "../../assets/images/mainpage1.jpg";
 
-// Function for fetching the product information
-// const getProductInformation = (productId) => {
-//   let data = {};
-//   return data;
-// };
+const ProductDetail = () => {
+  const [productsDetail, setProductsDetail] = useState([]);
 
-// const ProductDetail = () => {
-//   const [productInformation, setProductInformation] = useState({});
+  const { productId } = useParams();
 
-// ? React router parameter
+  const getProductDetail = () => {
+    axios
+      .get(`http://localhost:7883/productDetail/${productId}`)
+      .then((response) => {
+        const Data = response.data;
+        // console.log("This is detail data: ", Data);
+        setProductsDetail(Data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
-// let { id: productID } = useParams();
+  useEffect(() => {
+    getProductDetail();
+  }, []);
 
-// useEffect(() => {
-//   setProductInformation(getProductInformation);
-// }, []);
-
-const ProductDetail = ({
-  Id,
-  ID,
-  name,
-  description,
-  dimensions,
-  fabric,
-  category,
-  price,
-  productImg,
-}) => {
   return (
     <>
-      <div className="container">
-        ProductDetail ID: <h3>{name}</h3>
+      <div>
+        <h3>Product ID: {productId}</h3>
+        <div className="detailInfo">
+          {productsDetail.map((product) => (
+            <div>
+              <h2>{product.name}</h2>
+              <div className="basicInformation">
+                <p className="description">{product.description}</p>
+                <p>materiál: {product.fabric}</p>
+                <p>{product.dimensions}</p>
+              </div>
+              <div className="imagePrice">
+                <img src={product.image} />
+
+                <p>{product.price}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <h3 key={ID}>{Id}</h3>
     </>
   );
 };

@@ -97,6 +97,10 @@ body {
   background-size: 100% 120%;
 }
 #shadowp_form p:link p:visited {
-  text-decoration: none;
+  text-decoration: none !important;
   color: black;
+}
+#shadowp_form:hover {
+  color: darkgoldenrod;
+  text-decoration: none !important;
 }

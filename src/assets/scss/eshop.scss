@@ -25,3 +25,26 @@
 .product-list {
   height: calc(100vh);
 }
+.detailInfo {
+  width: 100vw;
+  height: 88vh;
+  min-height: 100%;
+}
+.basicInformation {
+  background-color: ghostwhite;
+  width: 50vw;
+  height: 300px;
+  margin-right: 2vh;
+  align-items: center;
+  margin-top: 10vh;
+  border-radius: 15px 15px;
+  position: inherit;
+  float: right;
+  .description {
+    margin-top: 15vh;
+  }
+}
+
+.imagePrice {
+  margin-top: 15vh;
+}
