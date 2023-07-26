@@ -1,3 +1,7 @@
+.ok {
+  height: 100vh;
+  background-color: black;
+}
 .cal {
   display: inline-grid;
   /* position: fixed; */
@@ -11,6 +15,7 @@
   color: gold;
   background-color: rgba(0, 0, 0, 0.295);
 }
+
 #dark span {
   color: red;
 }

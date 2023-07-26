@@ -36,8 +36,11 @@ const ProductDetail = () => {
               <h2>{product.name}</h2>
               <div className="basicInformation">
                 <p className="description">{product.description}</p>
-                <p>materiál: {product.fabric}</p>
-                <p>{product.dimensions}</p>
+                <br />
+                <p>meterial: {product.fabric}</p>
+                <p>
+                  dimension: {product.dimensions} x {product.dimensions} m²
+                </p>
               </div>
               <div className="imagePrice">
                 <img src={product.image} />
