@@ -1,10 +1,8 @@
-import React, { useState, createContext, useEffect } from "react";
-import axios from "axios";
+import React, { useState, createContext } from "react";
 // React router
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // Components
-// import Calendar from "./Calendar/Calendar";
 import Profile from "./Profile/Profile";
 import Forms from "./Form/Forms";
 import Home from "./pages/Home/Home";
@@ -16,6 +14,7 @@ import ProductList from "./pages/Eshop/ProductList";
 import ProductDetail from "./pages/Eshop/ProductDetail";
 import FetchData from "./pages/Eshop/fetchdata";
 
+// Other
 import ContactUs from "./pages/Contact/Contact";
 import Error from "./pages/Error/Error";
 import "./pages/Home/style.css";

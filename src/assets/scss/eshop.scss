@@ -31,7 +31,7 @@
   min-height: 100%;
 }
 .basicInformation {
-  background-color: burlywood;
+  background-color: lightblue;
   width: 50vw;
   height: 300px;
   margin-right: 2vh;
@@ -46,6 +46,12 @@
   }
 }
 
-.imagePrice {
-  margin-top: 15vh;
+.image {
+  width: 400px;
+  height: 60vh;
+  border-radius: 15px 15px;
+  display: inline;
+}
+.imagePart {
+  margin-top: 10vh;
 }

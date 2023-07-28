@@ -11,7 +11,7 @@ const ProductDetail = () => {
 
   const getProductDetail = () => {
     axios
-      .get(`http://localhost:7883/productDetail/${productId}`)
+      .get(`/detail.php?id=${productId}`)
       .then((response) => {
         const Data = response.data;
         setProductsDetail(Data);
@@ -40,11 +40,13 @@ const ProductDetail = () => {
                 <p>
                   dimension: {product.dimensions} x {product.dimensions} m²
                 </p>
+                <p className="imagePrice">
+                  Price: <b>{product.price}</b>
+                </p>
               </div>
-              <div className="imagePrice">
-                <img src={product.image} />
 
-                <p>{product.price}</p>
+              <div className="imagePart">
+                <img src={product.image} alt="img" className="image" />
               </div>
             </div>
           ))}

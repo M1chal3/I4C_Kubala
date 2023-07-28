@@ -2,6 +2,7 @@
   "name": "web-pages",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://kubala-dmp.lab.uzlabina.cz/",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.11.1",

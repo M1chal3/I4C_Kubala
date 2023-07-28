@@ -7,7 +7,7 @@ const ProductList = () => {
 
   const getAxios = () => {
     axios
-      .get("http://localhost:7883/fetch")
+      .get("data.php")
       .then((response) => {
         const Data = response.data;
         setProducts(Data);
@@ -21,8 +21,6 @@ const ProductList = () => {
   return (
     <div className="product-list">
       <div className="container_eshop">
-        {/* <h2>Total products:{this.state.Data}</h2>
-        <input onChange={this.filtrData}>žaluzie</input> */}
         {products.map((product) => (
           <Product
             Id={product.Id}
@@ -32,7 +30,7 @@ const ProductList = () => {
             fabric={product.fabric}
             category={product.category}
             price={product.price}
-            productImg={product.productImg}
+            image={product.image}
             key={product.Id}
           />
         ))}

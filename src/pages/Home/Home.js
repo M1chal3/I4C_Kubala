@@ -1,5 +1,4 @@
 import React, { Fragment, createContext, useState } from "react";
-// import "./home.css";
 import "./style.css";
 import Menu from "../../components/Menu";
 import { FaShoppingBasket } from "react-icons/fa";
@@ -51,10 +50,6 @@ export default function Home() {
       </div>
 
       <div id="contact" href="bottom">
-        {/* <div id="bottom">
-          <a href="bottom">contact</a>
-        </div> */}
-
         <p id="shadowp">E-mail: kubalmi@student.uzlabina.cz</p>
         <p id="shadowp">Tel. number: 656 789 256</p>
         <p id="shadowp">Address: V Úžlabině 320/23, 100 00 Praha 10</p>
