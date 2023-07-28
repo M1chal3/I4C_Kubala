@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Product from "./Product";
 import axios from "axios";
-import MainPageImg from "../../assets/images/mainpage1.jpg";
 
 const ProductDetail = () => {
   const [productsDetail, setProductsDetail] = useState([]);

@@ -23,11 +23,9 @@ const ContactUs = () => {
       )
       .then(
         (result) => {
-          console.log(result.text, result.status);
           setStatusMessage("E-mail byl úspěšně zaslán");
         },
         (error) => {
-          console.log(error.text);
           setStatusMessage("$(error.text)Oops! něco se nezdařilo");
         }
       );
@@ -54,7 +52,6 @@ const ContactUs = () => {
             placeholder="e.g 726 626 325"
             type="number"
             name="phone"
-
           />
           <br></br>
           <label className="details">Your email</label>

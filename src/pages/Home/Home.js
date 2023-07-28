@@ -1,7 +1,5 @@
 import React, { Fragment, createContext, useState } from "react";
 import "./style.css";
-import Menu from "../../components/Menu";
-import { FaShoppingBasket } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import MainPageImg from "../../assets/images/mainpage1.jpg";

@@ -6,11 +6,6 @@ import "./form_style.css";
 export default function Forms() {
   return (
     <div className="info">
-      {/* <Menu /> */}
-      {/* <div>
-        <h2 id="form">Form and information about shading technology</h2>
-      </div> */}
-
       <div className="all">
         <div className="box1">
           <h3 className="header1">Shadign technology</h3>
@@ -35,7 +30,9 @@ export default function Forms() {
         </div>
         <div className="box2">
           <h3 className="header2">Basic info</h3>
-          stínící technika je velmi důležitá
+          stínící technika je velmi důležitá a hraje velkou roli v našich
+          životech
+          <br />¨ slouží pro zastínění před světlem nebo ochranou před sluníčkem
         </div>
 
         <div className="box3">
@@ -100,7 +97,6 @@ export default function Forms() {
         </div>
       </div>
       <h2 className="box5">Send form</h2>
-      {/* <p id="arrow">↓</p> */}
       <Link to="/contact">
         <p
           id="shadowp_form"
